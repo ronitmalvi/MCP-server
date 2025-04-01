@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import httpx
 import os
 import json
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup # type: ignore
 load_dotenv()
 
 mcp=FastMCP("docs")
@@ -74,3 +74,4 @@ async def get_docs(query:str,library:str):
 
 
 if __name__ == "__main__":
+    mcp.run(transport="stdio")
